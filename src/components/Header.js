@@ -40,7 +40,7 @@ const Header = () => {
   }, [])
 
   return (
-    <div className='header flex justify-between text-white z-30 absolute px-6 py-1 bg-gradient-to-b from-black w-full'>
+    <div className='header flex justify-between text-white z-30 absolute top-0 px-6 py-1 bg-gradient-to-b from-black w-full'>
         <img src={logo} className='w-52' alt="logo" />
        
         {user && <button className="sign-out bg-red-800 h-14 my-3 rounded-md px-2" onClick={signOutVal}>Sign Out</button>}

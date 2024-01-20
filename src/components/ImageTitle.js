@@ -2,7 +2,7 @@ import React from 'react'
 
 const ImageTitle = ({title , overview}) => {
   return (
-    <div className="main w-full h-screen bg-gradient-to-r from-black pl-10 pt-96 lg:pt-72 absolute text-white">
+    <div className="main w-full h-screen lg:mt-10 bg-gradient-to-r from-black pl-10 pt-96 lg:pt-72 absolute text-white">
    <div className="sub w-3/4 lg:w-1/4">
    <div className='text-3xl mb-3 font-semibold'>{title}</div>
     <div className='hidden lg:block mb-5'>{overview}</div>
