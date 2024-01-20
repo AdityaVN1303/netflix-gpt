@@ -27,8 +27,8 @@ const ImageBg = ({id , img}) => {
 
   return (
     <div className=''>
-        <img className='md:hidden w-full h-screen object-cover ' src={imageBg} alt="bgImg" /> 
-        <iframe className='w-full hidden lg:block  aspect-video -my-28' src={`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=1&mute=1&controls=0&showinfo=0&start=1`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        {/* <img className='md:hidden w-full h-screen object-cover ' src={imageBg} alt="bgImg" />  */}
+        <iframe className='w-full  lg:block  aspect-video -my-10 lg:-my-28' src={`https://www.youtube.com/embed/${trailerVideo?.key}?&autoplay=1&mute=1&controls=0&showinfo=0&start=1`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
     </div>
   )

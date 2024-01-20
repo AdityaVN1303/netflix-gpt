@@ -9,7 +9,8 @@ const MainContainer = () => {
 
     if(!movies) return;
 
-    const mainMovie = movies[0];
+    const number = Math. trunc(Math. random()*20);
+    const mainMovie = movies[number];
 
   return (
     <>
