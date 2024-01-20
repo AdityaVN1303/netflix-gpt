@@ -4,12 +4,11 @@ import {addUser} from '../utils/userSlice'
 import {isValid} from '../utils/validate'
 import {createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile } from "firebase/auth";
 import {auth} from '../utils/firebase'
-import {useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
+import { bgImg } from '../utils/constants';
 
 const Login = () => {
-
-  const navigate = useNavigate();
+  
   const dispatch = useDispatch();
 
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -44,7 +43,6 @@ createUserWithEmailAndPassword(auth, email.current.value, password.current.value
       const {uid , email , displayName} = auth.currentUser;
           dispatch(addUser({uid : uid , email : email , displayName : displayName }));
     })
-    navigate('/browse');
   })
   .catch((error) => {
     // SignUp Reject
@@ -60,7 +58,6 @@ createUserWithEmailAndPassword(auth, email.current.value, password.current.value
     // Sign In Success
     const user = userCredential.user;
     console.log(user);
-    navigate('/browse');
   })
   .catch((error) => {
     // Sign In Reject
@@ -76,7 +73,7 @@ createUserWithEmailAndPassword(auth, email.current.value, password.current.value
     <>
     <Header/>
     <div className="login_form">
-      <img src="https://assets.nflxext.com/ffe/siteui/vlv3/16006346-87f9-4226-bc25-a1fb346a2b0c/9662d0fd-0547-4665-b887-771617268815/IN-en-20240115-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="bg" className='w-full h-screen object-cover' />
+      <img src={bgImg} alt="bg" className='w-full h-screen object-cover' />
     </div>
     <form onSubmit={(e)=>{e.preventDefault()}} action="" className='bg-black bg-opacity-85 text-white absolute top-0 left-0 right-0 mt-32 mx-10 md:mx-auto md:w-1/4 flex flex-col justify-center items-start p-16 px-8'>
       <h1 className='text-4xl mb-10'>{isSignInForm? "Sign In" : "Sign Up"}</h1>
