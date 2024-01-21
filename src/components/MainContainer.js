@@ -14,7 +14,7 @@ const MainContainer = () => {
 
   return (
     <>
-    <ImageTitle title={mainMovie?.title} overview={mainMovie?.overview}/>
+    <ImageTitle title={mainMovie?.title} overview={mainMovie?.overview} id={mainMovie?.id}/>
 
     <ImageBg img={mainMovie.poster_path} id={mainMovie.id}/>
     </>

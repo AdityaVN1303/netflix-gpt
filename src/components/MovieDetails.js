@@ -40,7 +40,7 @@ const MovieDetails = () => {
     <HeaderForDetailPage/>
     <div className="detail">
       <ImageBg id={id}/>
-      <div className="writeup px-5 mt-10 h-full bg-black text-white">
+      <div className="writeup px-5 mt-5 h-full bg-black text-white">
         <h1 className='text-3xl font-semibold lg:text-4xl'>
           {movie?.title}
         </h1>
