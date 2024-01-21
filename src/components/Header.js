@@ -50,7 +50,9 @@ const Header = () => {
         <img src={logo} className=' w-20 h-10 lg:h-auto lg:w-52' alt="logo" />
 
         <div className="space-x-3">
-        <button onClick={toggleVal} className=' bg-blue-700 font-semibold text-white lg:h-14 my-3 lg:text-base text-sm rounded-md px-2'>{search ? "Browse" : "GptSearch"}</button>
+        { user &&
+          <button onClick={toggleVal} className=' bg-blue-700 font-semibold text-white lg:h-14 my-3 lg:text-base text-sm rounded-md px-2'>{search ? "Browse" : "GptSearch"}</button>
+        }
         {user && <button className="sign-out bg-red-800 font-semibold lg:h-14 my-3 lg:text-base text-sm rounded-md px-2" onClick={signOutVal}>Sign Out</button>}
         </div>
        

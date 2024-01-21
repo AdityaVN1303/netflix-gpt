@@ -3,9 +3,14 @@ import {headerbgImg} from '../utils/constants'
 
 const MovieCard = ({title, img}) => {
   return (
-        <div className="w-28 lg:w-36 overflow-hidden inline-block mx-3">
-          <img className='' src={headerbgImg + img} alt="card-img" />
-        </div>
+       <>
+       {img &&
+         <div className="w-28  lg:w-36 my-5 overflow-hidden inline-block mx-3">
+          {
+             <img className='' src={headerbgImg + img} alt="card-img" />
+          }
+        </div>}
+       </>
   )
 }
 

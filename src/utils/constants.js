@@ -11,3 +11,5 @@ export const API_OPTIONS = {
   };
 
 export const headerbgImg = "https://image.tmdb.org/t/p/w500";
+
+export const gptKey ="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";
