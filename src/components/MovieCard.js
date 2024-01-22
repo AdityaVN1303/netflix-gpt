@@ -5,7 +5,7 @@ const MovieCard = ({title, img}) => {
   return (
        <>
        {img &&
-         <div className="w-28  lg:w-36 my-5 overflow-hidden inline-block mx-3">
+         <div className="w-28  lg:w-36 rounded-md my-5 overflow-hidden inline-block mx-3">
           {
              <img className='' src={headerbgImg + img} alt="card-img" />
           }
